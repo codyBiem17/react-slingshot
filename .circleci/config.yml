@@ -6,13 +6,6 @@ jobs:
       - image: cimg/node:13.8.0 #use cimg or circleci
     steps:
       - checkout
-      - run:
-          name: Save Hello World
-          command: echo "hello" > tmp/dir/output.txt
-      - persist_to_workspace:
-          root: tmp/dir
-          paths:
-            - output.txt
   
   test:
     docker:
